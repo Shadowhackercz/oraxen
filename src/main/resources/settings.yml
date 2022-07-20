@@ -1,41 +1,41 @@
 Plugin:
-  language: "english"
+  language: "czech"
   commands:
     repair:
-      oraxen_durability_only: false # will not repair vanilla items if set to true
+      oraxen_durability_only: false # nebude opravovat vanilla předměty když je na true
 
 Pack:
   generation:
     generate: true
-    # 64x32 layer is default size and corresponds to 16. If you need higher
-    # resolution, e.g. 128x64, you should set this parameter to 32 and so on.
+    # 64x32 vrstva je default velikost a koresponduje na 16, pokud potřebujete větší
+    # rozlišení, například 128x64, musíte nastavit tento parametr na 32 a tak dále.
     armor_resolution: 16
-    compression: BEST_COMPRESSION # see Deflater.class
-    # protection will use several methods to make your pack impossible to extract
-    # with usual tools (native windows unzip, 7zip, winrar, etc) without altering
-    # its integrity. Be careful if you activate this option to not try to extract
-    # the pack or you might fill your disk.
+    compression: BEST_COMPRESSION # viz Deflater.class
+    # ochrana použije různé metody, aby bylo nemožné extrahovat váš balíček
+    # s obyčejnými toolkami (jako windows unzip, 7zip, winrar, atd) bez změny integrity
+    # Buďte opatrní pokud aktivujete tuto možnost, nezkoušejte extrahovat balíček nebo
+    # můžete zaplnit váš disk.
     protection: true
-    comment: "The content of this texture pack
-     \nbelongs to the owner of the Oraxen
-     \nplugin and any complete or partial
-     \nuse must comply with the terms and
-     \nconditions of Oraxen."
+    comment: "Obsah tohoto texture packu
+     \nnáleží majiteli Oraxen
+     \npluginu a plné či částečné
+     \npoužití musí odpovíat podmínkám
+     \na pravidlům Oraxen."
 
   upload:
     enabled: true
     type: polymath #transfer.sh or polymath
     polymath:
-      server: atlas.oraxen.com # you can also host your own polymath instance
+      server: atlas.oraxen.com # můžete také hostovat vlastní polymath instanci
 
   dispatch:
     send_pack: true
     delay: -1
-    # this option requires ProtocolLib and will make the pack loading more fluid
+    # toto nastavení potřebuje ProtocolLib a udělá načtení balíčku více příjemné
     send_pack_advanced:
       enabled: true
       mandatory: true
-      message: "<#fa4943>Accept the pack to enjoy a full <b><gradient:#9055FF:#13E2DA>Oraxen</b><#fa4943> experience"
+      message: "<#fa4943>Přijměte balíček a užijte si plný <b><gradient:#9055FF:#13E2DA>Oraxen</b><#fa4943> zážitek"
     join_message:
       enabled: false
       delay: -1
@@ -49,14 +49,14 @@ Pack:
           type: oraxen:welcome
           volume: 1.0
           pitch: 1.0
-        delay: 5 # delay in ticks
+        delay: 5 # delay v tick
         message:
           enabled: false
           # KICK / CHAT / ACTION_BAR / TITLE
           type: ACTION_BAR
-          # Click and Hover elements are only available by using the CHAT type
-          content: "<#55ffa4><bold>ResourcePack loaded"
-        # If you need to send commands
+          # Click a Hover elementy jsou dostupné pouze pro CHAT typ
+          content: "<#55ffa4><bold>ResourcePack načten"
+        # Pokud potřebujete odeslat příkazy
         commands:
           console: [ ]
           player: [ ]
@@ -67,9 +67,9 @@ Pack:
         message:
           # KICK / CHAT / ACTION_BAR / TITLE
           type: ACTION_BAR
-          # Click and Hover elements are only available by using the CHAT type
+          # Click a Hover elementy jsou dostupné pouze pro CHAT typ
           content: "<#55ffa4><bold>ResourcePack accepted"
-        # If you need to send commands
+        # Pokud potřebujete odeslat příkazy
         commands:
           console: [ ]
           player: [ ]
@@ -81,9 +81,9 @@ Pack:
           enabled: false
           # KICK / CHAT / ACTION_BAR / TITLE
           type: CHAT
-          # Click and Hover elements are only available by using the CHAT type
-          content: "<red>You refused the ResourcePack, but you need it in order to see the new items. Please </red><click:run_command:/oraxen pack send @p><hover:show_text:\"<green>Display more informations\"><green><bold>CLICK HERE</bold></hover></click> <red>or type <bold>/o pack send @p"
-        # If you need to send commands
+          # Click a Hover elementy jsou dostupné pouze pro CHAT typ
+          content: "<red>Odmítli jste použití ResourcePack, ale je nutno ho mít, abyste viděli nové předměty. Prosím, </red><click:run_command:/oraxen pack send @p><hover:show_text:\"<green>Ukázat více informací\"><green><bold>KLIK ZDE</bold></hover></click> <red>či napište <bold>/o pack send @p"
+        # Pokud potřebujete odeslat příkazy
         commands:
           console: [ ]
           player: [ ]
@@ -95,9 +95,9 @@ Pack:
           enabled: false
           # KICK / CHAT / ACTION_BAR / TITLE
           type: CHAT
-          # Click and Hover elements are only available by using the CHAT type
+          # Click a Hover elementy jsou dostupné pouze pro CHAT typ
           content: "<red>You failed to download the ResourcePack, but you need it in order to see the new items. Please </red><click:run_command:/oraxen pack send @p><hover:show_text:\"<red>/!\\ loading the resourcepack from the game can cause lags\"><red><bold>CLICK HERE</bold></hover></click> <red>to retry or type <bold>/o pack send @p</bold>"
-        # If you need to send commands
+        # Pokud potřebujete odeslat příkazy
         commands:
           console: [ ]
           player: [ ]
